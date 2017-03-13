@@ -19,7 +19,7 @@ class ExchangeBlock extends Component {
   };
 
   onInputChange = (event) => {
-    const newValue = event.currentTarget.value.slice(1);
+    const newValue =  event.currentTarget.value.replace('-', '');
     if (!isNumber(newValue)) { return; }
     this.props.onChange(newValue);
   };
@@ -32,7 +32,7 @@ class ExchangeBlock extends Component {
           <div className="exchange-block-currency-code">{code}</div>
           <input
             className={`exchange-block-input ${error ? 'exchange-block-input-error' : ''}`}
-            value={(amount === '0' || amount === 0) ? '' : `-${amount}`}
+            value={(amount === '0' || amount === 0 || amount === '') ? '' : `-${amount}`}
             placeholder="0.00"
             onChange={this.onInputChange}
           />
