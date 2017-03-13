@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "react",
+    "latest",
+    ["es2015", { "modules": false }]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "react-require",
+    "transform-class-properties",
+    ["transform-object-rest-spread", { "useBuiltIns": true }],
+    ["transform-regenerator", {
+      "async": false
+    }],
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
+}
