@@ -6,5 +6,5 @@
 1. First `npm i`
 2. Second `npm start`
 
-Use:
+I'm use:
 React, redux, sagas, reselect, fx, axios and rates get from http://fixer.io/
